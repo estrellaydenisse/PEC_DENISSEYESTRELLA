@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consejos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+    <img src="logo.png" alt="Logo Estrella y Denisse" class="logo">
+</header>
+    <div class="consejo-box">
+
+    <h2>Consejo para ti</h2>
+
+    <p id="consejo">
+        Presiona el botón para recibir un consejo.
+    </p>
+
+    <button onclick="mostrarConsejo()">
+        Dame un consejo
+    </button>
+
+</div>
+
+<script>
+
+    const consejos = [
+        " No tengas miedo de pedir ayuda cuando la necesites.",
+        
+        " Recuerda que está bien equivocarse. Todos aprendemos.",
+        
+        " Respira profundamente cuando te sientas estresado.",
+        
+        " Dedica un momento del día a hacer algo que disfrutes.",
+        
+        " Confía en tus capacidades y en todo lo que has aprendido.",
+        
+        "Habla con alguien de confianza cuando algo te preocupe.",
+        
+        " Organiza tus tareas para evitar sentirte abrumado.",
+        
+        " Descansa lo suficiente para recuperar tu energía.",
+        
+        " Date un descanso de las redes sociales cuando lo necesites.",
+        
+        "Trata de hablar contigo mismo de la misma manera que hablarías con un amigo.",
+        
+        "Recuerda que no tienes que estar feliz todo el tiempo.",
+        
+        " Celebra tus pequeños logros, también son importantes.",
+        
+        " Escucha música que te haga sentir tranquilo.",
+        
+        " Sal a caminar y despeja tu mente cuando tengas oportunidad.",
+        
+        " Cada día es una nueva oportunidad para comenzar de nuevo."
+    ];
+
+
+    function mostrarConsejo() {
+
+        let numeroAleatorio = Math.floor(
+            Math.random() * consejos.length
+        );
+
+        document.getElementById("consejo").textContent =
+            consejos[numeroAleatorio];
+
+    }
+
+</script>
+<footer>
+<p>&copy; Estrella y Denisse PAEC</p>
+</footer>
+
+
+
+</body>
+</html>
